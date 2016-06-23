@@ -23,19 +23,22 @@ class MediaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		if (is_dir(base_path() . '/resources/views/wi/media')) {
-			$this->loadViewsFrom(base_path() . '/resources/views/wi/media', 'media');
-		} else {
-			$this->loadViewsFrom(__DIR__.'/views', 'media');
-		}
+
 		if (!$this->app->routesAreCached()) {
 			$this->setupRoutes($this->app->router);
 		}
 
+	    if (is_dir(base_path() . '/resources/views/admin/media')) {
+		    //load from resource
+		    $this->loadViewsFrom(base_path() . '/resources/views/admin/media', 'media');
+	    } else {
+		    //load from package
+		    $this->loadViewsFrom(__DIR__.'/views', 'media');
+	    }
 
-		$this->publishes([
-			__DIR__.'/views' => base_path('resources/views/wi/media'),
-		]);
+	    $this->publishes([
+		    __DIR__.'/views' => base_path('resources/views/admin/media')
+	    ],'media');
     }
 	
 	/**

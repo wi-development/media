@@ -1,0 +1,10 @@
+{
+    "name": "wi/media",
+    "authors": [
+        {
+            "name": "Tonny Wijnand",
+            "email": "tonnywijnand@gmail.com"
+        }
+    ],
+    "require": {}
+}

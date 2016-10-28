@@ -1,7 +1,8 @@
-    <div class="modal-header" style="padding-bottom:0px;">
-        <h3 class="modal-title" style="padding-top:0px;">Uploaden</h3>
+
+    <div class="modal-header">
+        <h3 class="modal-title">Create Media</h3>
     </div>
-    <div class="modal-body" style="padding-top:0px;">
+    <div class="modal-body">
 
 
         <?php
@@ -22,7 +23,8 @@
 
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">Sluiten</button>
-        <button class="btn btn-warning hide" type="button" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="okTEST()">OK</button>
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
     </div>
 
